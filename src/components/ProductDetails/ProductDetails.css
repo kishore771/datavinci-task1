@@ -246,8 +246,8 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.payment-buttons{
-  background-color: #F2F2F2;
+.payment-buttons-container{
+  background-color: #ececec;
   border-radius: 25px;
   padding-top: 30px;
   padding-left: 25px;
@@ -593,12 +593,26 @@
     justify-content: center;
   }
 
-  .payment-buttons {
-    width: 100%;
+  .payment-buttons-container {
+    width: 80%;
     gap: 10px;
-    text-align: center;
+    
   }
-}
+
+  .btn1{
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .btn2 {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-left: 2px;
+  }
+  }
 @media (max-width: 768px) {
   .popup-content {
     width: 120%;          /* take nearly full width */

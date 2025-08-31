@@ -6,31 +6,30 @@
   gap: 50px;
   max-width: 1200px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0 auto;
   padding: 20px;
+  margin: 0 auto; /* Center the container */
+  box-sizing: border-box;
 }
 
-/* Left side (images) */
 .product-image-container {
   flex: 1;
   max-width: 55%;
 }
 
-/* Right side (details) */
 .product-details {
   flex: 1.2;
   max-width: 55%;
 }
 
-/* 📱 Responsive layout for tablets & mobiles */
 @media (max-width: 768px) {
   .product-page {
-    flex-direction: column;   /* Stack vertically */
-    gap: 20px;
+    flex-direction: column; /* Stack vertically */
+    width: 100%;            /* Ensure it fits screen */
+    padding: 10px;          /* Reduce padding */
   }
 
   .product-image-container,
   .product-details {
-    max-width: 100%;  /* Take full width */
+    max-width: 100%;  /* Full width on mobile */
   }
 }

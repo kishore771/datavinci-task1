@@ -131,7 +131,7 @@ const ProductDetails = () => {
 
       <div className="payment-methods">
         <p className="payment-title">PAYMENT OPTIONS (SELECT ONE)</p>
-        <div className="payment-buttons">
+        <div className="payment-buttons-container">
         <button className="btn1"><div className="btn-text"><p>One-time <br/> Payment</p>
         <p>$55.88 <br/>USD</p></div></button>
         <button className="btn2"><div className="btn-text"><p>Subscribe & Save <br/> 20%</p>
