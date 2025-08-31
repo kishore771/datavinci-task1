@@ -1,0 +1,219 @@
+/* Header Base Styles */
+.header {
+  width: 100%;
+  background: #ffffff; /* white background */
+  border-bottom: 1px solid #e5e5e5; /* thin gray line */
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 20px;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Mobile Menu Button (Hamburger) */
+.menu-btn {
+  display: block; /* visible on mobile */
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #313131;
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Which Manuka Button */
+.which-manuka {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #313131;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #313131;
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    padding: 12px 14px;
+    width: 100%;
+  }
+
+  .which-manuka {
+    display: none; /* hide on mobile */
+  }
+
+  .header-flex {
+    gap: 10px;
+  }
+
+  .logo img {
+    max-width: 140px;
+  }
+}
+
+/* Navigation Menu */
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+  z-index: 99;
+}
+
+.nav.show {
+  display: flex;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #313131;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #0085ca;
+}
+
+/* Desktop Navigation */
+@media (min-width: 1024px) {
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 48px;
+    position: static;
+    background: none;
+    padding: 0;
+    border: none;
+  }
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    position: static;
+    transform: none;
+    margin-left: 52px;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+}
+
+/* Right Menu */
+.right-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 1024px) {
+  .right-menu {
+    gap: 50px;
+    margin-left: 52px;
+  }
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.account-icon,
+.search-icon,
+.cart-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #313131;
+}
+
+/* Desktop icons larger */
+@media (min-width: 1024px) {
+  .account-icon,
+  .search-icon,
+  .cart-icon {
+    width: 28px;
+    height: 28px;
+    stroke: #313131;
+  }
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 15px;
+  height: 15px;
+  background: #f1b434;
+  color: #313131;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop Layout Fix */
+@media (min-width: 1024px) {
+  .header-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+}

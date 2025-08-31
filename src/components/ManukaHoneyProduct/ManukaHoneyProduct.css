@@ -1,0 +1,36 @@
+.product-page {
+  display: flex;
+  flex-direction: row;   /* Row on desktop */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Left side (images) */
+.product-image-container {
+  flex: 1;
+  max-width: 55%;
+}
+
+/* Right side (details) */
+.product-details {
+  flex: 1.2;
+  max-width: 55%;
+}
+
+/* 📱 Responsive layout for tablets & mobiles */
+@media (max-width: 768px) {
+  .product-page {
+    flex-direction: column;   /* Stack vertically */
+    gap: 20px;
+  }
+
+  .product-image-container,
+  .product-details {
+    max-width: 100%;  /* Take full width */
+  }
+}
